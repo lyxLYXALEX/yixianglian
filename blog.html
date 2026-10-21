@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>博客 · 自留地</title>
+  <meta name="description" content="生活记录，按时间倒序。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+
+  <header class="site-head">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">自留地</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="blog.html" aria-current="page">博客</a>
+      <a href="updates.html">近况</a>
+      <a href="works.html">作品</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <span class="head-meta"><span id="clock">--:--:--</span></span>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h1 class="sec-title">博客</h1>
+        <p class="sec-note">共 <span id="post-total">—</span> · 点标题展开全文</p>
+      </div>
+
+      <p class="page-intro">
+        这里放日常记录，最新写的在最上面。每篇文章都是
+        <code>content/posts/</code> 里的一个 <code>.md</code> 文件。
+      </p>
+
+      <!-- 文章列表由 JS 从 content/data.js 渲染 -->
+      <div id="post-list"></div>
+
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <p>这里是一个学生自己搭的角落 · 用 HTML / CSS / JS 手写</p>
+        <p class="foot-meta">© <span id="year">2026</span> · 内容更新 <span id="updated">2026-10-17</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="content/data.js"></script>
+  <script src="content/site-config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/announcement.js"></script>
+  <script src="assets/js/comments.js"></script>
+</body>
+</html>

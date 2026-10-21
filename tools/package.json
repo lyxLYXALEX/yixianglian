@@ -1,0 +1,12 @@
+{
+  "name": "ziliudi-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "站点辅助脚本的依赖。只在本地跑，不参与部署，node_modules 不进仓库。",
+  "scripts": {
+    "photos": "node compress-photos.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

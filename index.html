@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自留地 · 一个学生的角落</title>
+  <meta name="description" content="一个学生自己搭的角落：写下来的、拍下来的、做了一半的。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="自留地">
+  <meta property="og:description" content="一个学生自己搭的角落。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+
+  <!-- 页头：每个页面都一样，改导航记得 5 个文件一起改 -->
+  <header class="site-head">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">自留地</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html" aria-current="page">首页</a>
+      <a href="blog.html">博客</a>
+      <a href="updates.html">近况</a>
+      <a href="works.html">作品</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <span class="head-meta"><span id="clock">--:--:--</span></span>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <!-- 首屏：一句话 + 一张图 + 两个小交互 -->
+      <section class="hero">
+        <div class="hero-text">
+          <p class="hero-kicker">站点 01 · 手工搭建</p>
+          <h1 class="hero-title">
+            <span class="glitch" data-text="乱一点">乱一点</span><br>也没关系
+          </h1>
+          <!-- 这句话由 content/quotes.js 提供，点「换一句」往下换；这里留一句兜底，禁用 JS 时也不空着 -->
+          <p class="hero-lead" id="hero-lead">天空好想下雨 我好想住你隔壁 ——《有何不可》</p>
+          <div class="hero-actions">
+            <a class="btn" href="#doors">进去看看 ↓</a>
+            <button class="btn" type="button" id="shuffle-line">换一句</button>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <!-- 手绘头像。两个尺寸：窄屏/普通屏走 800，高清屏才会取 1024 那张 -->
+          <img src="photos/me-avatar-view.webp"
+               srcset="photos/me-avatar-thumb.webp 800w, photos/me-avatar-view.webp 1024w"
+               sizes="(max-width: 860px) calc(100vw - 40px), 435px"
+               alt="一张漫画风的 Q 版自画像：黑色卷发、黑框眼镜、黑色 T 恤"
+               width="1024" height="934">
+          <figcaption>画的我 · 漫画风头像</figcaption>
+        </figure>
+      </section>
+
+      <!-- 跑马灯条，纯装饰：鼠标移上去翻成黑底黄字，同时减速（不会停）
+           内容要原样复制 4 份：动画只把轨道往左推一份的距离（-25%），
+           剩下的三份得够铺满整条，少于 4 份右边会露出空档。
+           改词只改第一行那份，后面三行跟着复制一遍就行。 -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>记录生活</span><span>存放照片</span><span>半成品也算作品</span><span>手工维护</span><span>会一直更新</span>
+          <span>记录生活</span><span>存放照片</span><span>半成品也算作品</span><span>手工维护</span><span>会一直更新</span>
+          <span>记录生活</span><span>存放照片</span><span>半成品也算作品</span><span>手工维护</span><span>会一直更新</span>
+          <span>记录生活</span><span>存放照片</span><span>半成品也算作品</span><span>手工维护</span><span>会一直更新</span>
+        </div>
+      </div>
+
+      <!-- 三个入口 -->
+      <section class="doors" id="doors" aria-label="站点入口">
+        <a class="door" href="blog.html">
+          <span class="door-num">01 / BLOG</span>
+          <span class="door-name">博客</span>
+          <p class="door-desc">生活记录，按时间倒序。想到什么写什么。</p>
+          <span class="door-count" id="count-posts">—</span>
+        </a>
+        <a class="door" href="updates.html">
+          <span class="door-num">02 / UPDATES</span>
+          <span class="door-name">近况</span>
+          <p class="door-desc">一句话、几张照片。不够单独写一篇的，就放这儿。</p>
+          <span class="door-count" id="count-updates">—</span>
+        </a>
+        <a class="door" href="works.html">
+          <span class="door-num">03 / WORKS</span>
+          <span class="door-name">作品</span>
+          <p class="door-desc">认真对待过的东西，做完的和没做完的都算。</p>
+          <span class="door-count" id="count-works">—</span>
+        </a>
+      </section>
+
+      <!-- 最近更新 -->
+      <section aria-labelledby="recent-heading">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <h2 class="sec-title" id="recent-heading">最近写下的</h2>
+          <p class="sec-note">来自 content/posts/</p>
+        </div>
+        <ul class="recent-list" id="recent-list"></ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <p>这里是一个学生自己搭的角落 · 用 HTML / CSS / JS 手写</p>
+        <p class="foot-meta">© <span id="year">2026</span> · 内容更新 <span id="updated">2026-10-17</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 数据在前，脚本在后，顺序不能反 -->
+  <script src="content/data.js"></script>
+  <script src="content/quotes.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/announcement.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于 · 自留地</title>
+  <meta name="description" content="LYX 的个人网站：一块自留地，一个抽屉，塞着写下来的事、拍下来的光和做到一半的东西。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+
+  <header class="site-head">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">自留地</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="blog.html">博客</a>
+      <a href="updates.html">近况</a>
+      <a href="works.html">作品</a>
+      <a href="about.html" aria-current="page">关于</a>
+    </nav>
+    <span class="head-meta"><span id="clock">--:--:--</span></span>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <div class="about">
+        <figure class="about-figure">
+          <img id="about-photo" src="photos/me-avatar-view.webp"
+               alt="一张漫画风的 Q 版自画像：黑色卷发、黑框眼镜、黑色 T 恤"
+               width="1024" height="934">
+          <figcaption>画的我 · 漫画风头像</figcaption>
+        </figure>
+
+        <div class="about-body">
+          <h1 class="about-title" id="about-title">关于这块地</h1>
+          <p><span class="badge-sample" id="about-sample" hidden>示例内容</span></p>
+          <!-- 正文由 JS 从 content/about.md 渲染 -->
+          <div class="prose" id="about-body"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <p>这里是一个学生自己搭的角落 · 用 HTML / CSS / JS 手写</p>
+        <p class="foot-meta">© <span id="year">2026</span> · 内容更新 <span id="updated">2026-10-17</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="content/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/announcement.js"></script>
+</body>
+</html>
