@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自留地 · 写作台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span>自留地 · 写作台</span>
+    </div>
+
+    <div class="gitinfo" id="gitinfo">连接中…</div>
+
+    <div class="top-actions">
+      <button class="ghost" id="refresh" title="重新读取磁盘上的内容">刷新</button>
+      <button class="primary" id="publish">发布到网站</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="side">
+      <nav id="tabs" aria-label="内容类型"></nav>
+      <div class="list-head">
+        <span id="list-title">…</span>
+        <button id="new" class="mini" title="新建一条">+ 新建</button>
+      </div>
+      <ul id="list"></ul>
+    </aside>
+
+    <main class="main" id="main"></main>
+  </div>
+
+  <section class="logbar" id="logbar" hidden>
+    <div class="log-head">
+      <span id="log-title">发布日志</span>
+      <button class="mini" id="log-close">收起</button>
+    </div>
+    <pre id="log"></pre>
+  </section>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -2,10 +2,10 @@
  * 修改内容请去 content/posts/*.md、content/works/*.md、content/updates/*.md、
  * content/announcements/*.md、content/about.md，
  * 然后运行：node tools/build-content.js
- * 生成时间：2026-10-21
+ * 生成时间：2026-10-22
  */
 
-window.SITE_BUILD_DATE = "2026-10-21";
+window.SITE_BUILD_DATE = "2026-10-22";
 
 window.SITE_POSTS = [
   {
@@ -120,6 +120,15 @@ window.SITE_WORKS = [
 ];
 
 window.SITE_UPDATES = [
+  {
+    "id": "update-002",
+    "date": "2026-10-22",
+    "displayDate": "2026.10.22",
+    "place": "家",
+    "photos": [],
+    "sample": false,
+    "html": "<p>昨天晚上非常糟糕，今天也差不多 改了半天屎山代码，bug依旧满天飞，索性直接不改了</p>"
+  },
   {
     "id": "update-001",
     "date": "2026-10-21",

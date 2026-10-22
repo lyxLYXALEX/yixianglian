@@ -437,4 +437,26 @@ window.SITE_ANNOUNCEMENT = ${JSON.stringify(announcement, null, 2)};
   console.log(`  输出 → ${path.relative(ROOT, OUT_FILE)}`);
 }
 
-main();
+/* 直接运行时才构建。
+   写作台（tools/admin/server.js）会 require 这个文件复用解析和渲染逻辑，
+   那种情况下不应该顺手把 data.js 也重建一遍。 */
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  ROOT,
+  CONTENT_DIR,
+  OUT_FILE,
+  normalizeFrontMatter,
+  splitFrontMatter,
+  parsePhotoList,
+  renderBlocks,
+  buildPosts,
+  buildWorks,
+  buildUpdates,
+  buildAnnouncements,
+  buildAbout,
+  pickCurrentNotice,
+  main
+};
